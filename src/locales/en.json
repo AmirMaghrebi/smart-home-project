@@ -1,0 +1,21 @@
+{
+  "hello": "Hello",
+  "welcome": "Welcome",
+  "home": "Smart Home",
+  "login_with_password": "Login with Password",
+  "login_with_fingerprint": "Login with Fingerprint",
+  "login_with_face": "Login with Face Recognition",
+  "enter_username": "Enter username",
+  "enter_password": "Enter password",
+  "show_password": "Show password",
+  "hide_password": "Hide password",
+  "login": "Login",
+  "dashboard": "Dashboard",
+  "home_menu": "Home",
+  "reports": "Reports",
+  "settings": "Settings",
+  "welcome_user": "Welcome {username}",
+  "logout": "Logout",
+  "dashoabrd": "Dashboard",
+  "show": "Show"
+}

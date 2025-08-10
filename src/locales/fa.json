@@ -1,0 +1,21 @@
+{
+  "hello": "سلام",
+  "welcome": " خوش آمدید",
+  "home": "خانه هوشمند",
+  "login_with_password": "ورود با رمز عبور",
+  "login_with_fingerprint": "ورود با اثر انگشت",
+  "login_with_face": "ورود با تشخیص چهره",
+  "enter_username": "نام کاربری را وارد کنید",
+  "enter_password": "رمز عبور را وارد کنید",
+  "show_password": "نمایش رمز",
+  "hide_password": "مخفی‌کردن رمز",
+  "login": "ورود",
+  "dashboard": "داشبورد",
+  "home_menu": "خانه",
+  "reports": "گزارش‌ها",
+  "settings": "تنظیمات",
+  "welcome_user": "{username} خوش آمدید",
+  "logout": "خروج",
+  "dashoabrd": "داشبورد",
+  "show": "نمایش"
+}
