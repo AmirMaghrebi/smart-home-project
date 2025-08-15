@@ -49,7 +49,7 @@
         
         <h1 class="text-xl font-semibold">{{ $t('welcome') }}</h1>
         <br></br>
-<br>
+<br></br>
 
         <button @click="logout" class="p-2 rounded-lg hover:bg-red-600 bg-red-500">{{ $t('logout') }}</button>
       </header>

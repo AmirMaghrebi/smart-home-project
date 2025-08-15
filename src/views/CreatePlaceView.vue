@@ -4,7 +4,7 @@
     <button 
       @click="showAddCloudModal = true"
       class="glass-effect p-4 rounded-xl mb-6 hover:bg-white/20 transition-colors" 
-    >  {{ $t('add_cloud') }}
+    >  {{ $t('add_place') }}
       
     </button>
 
@@ -28,14 +28,14 @@
             <button 
               @click.stop="editCloud(cloud)"
               class="p-2 w-8 h-8 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-white text-sm flex items-center justify-center shadow-md"
-              title="ویرایش"
+              :title = "$t('edit')"
             >
               ✏️
             </button>
             <button 
               @click.stop="deleteCloud(cloud)"
               class="p-2 w-8 h-8 rounded-lg bg-red-500 hover:bg-red-600 text-white text-sm flex items-center justify-center shadow-md"
-              title="حذف"
+              :title="$t('delete')"
             >
               🗑️
             </button>
@@ -66,13 +66,13 @@
     >
       <div class="glass-effect p-6 rounded-2xl w-full max-w-md">
         <h3 class="text-xl font-bold mb-4">
-          {{ showAddCloudModal ? 'افزودن ابر مکان جدید' : 'ویرایش ابر مکان' }}
+          {{ $t(showAddCloudModal ? 'add_place' : 'edit')}}
         </h3>
         
         <input
           v-model="newCloud.name"
           type="text"
-          placeholder="نام ابر مکان"
+          :placeholder= "$t('place_name')"
           class="w-full p-3 mb-4 bg-white/10 rounded-lg border border-white/20 text-center"
           dir="auto"
         >
@@ -94,13 +94,13 @@
             @click="closeModal"
             class="px-4 py-2 rounded-lg hover:bg-white/20"
           >
-            انصراف
+            {{$t('cancel')}}
           </button>
           <button 
             @click="confirmSave"
             class="px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white"
           >
-            ذخیره
+          {{$t('save')}}
           </button>
         </div>
       </div>
@@ -109,14 +109,15 @@
     <!-- مودال تأیید حذف -->
     <div v-if="showDeleteConfirm" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div class="glass-effect p-6 rounded-2xl w-full max-w-xs text-center">
-        <h3 class="text-lg font-bold mb-4">حذف ابر مکان</h3>
-        <p>آیا مطمئن هستید می‌خواهید "{{ deleteTarget?.name }}" را حذف کنید؟</p>
+        
+        <h3 class="text-lg font-bold mb-4"> {{ $t('delete_confirm_text') }}</h3>
+       
         <div class="flex justify-center gap-2 mt-6">
           <button @click="showDeleteConfirm = false" class="px-4 py-2 rounded-lg hover:bg-white/20">
-            خیر
+            {{$t('no')}}
           </button>
           <button @click="confirmDelete" class="px-4 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white">
-            بله، حذف شود
+            {{$t('yes')}}
           </button>
         </div>
       </div>
@@ -125,19 +126,34 @@
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
 
 const showAddCloudModal = ref(false);
 const showEditModal = ref(false);
 const showDeleteConfirm = ref(false);
 
+export type SubLocation = {
+  id: string
+  name: string
+  image?: string
+};
 type CloudLocation = {
-  id: string;
-  name: string;
-  image: string;
+  id: string
+  name: string
+  image: string
+  subLocations: SubLocation[]
 };
 
 const cloudLocations = ref<CloudLocation[]>([]);
-
+  cloudLocations.value.push({
+  id: '1',
+  name: 'خانه',
+  image: 'data:image/...',
+  subLocations: [] // ✅ حالا میدونیم subLocations یک آرایه از SubLocation هست
+})
 const newCloud = ref({
   id: '',
   name: '',
@@ -200,9 +216,8 @@ const editCloud = (cloud: CloudLocation) => {
 
 // مشاهده ابر مکان
 const viewCloud = (cloud: CloudLocation) => {
-  console.log('مشاهده کارت:', cloud);
-  // بعداً می‌تونی به صفحه جزئیات بروی
-  // router.push(`/cloud/${cloud.id}`)
+  console.log('مشاهده کلیک شد:', cloud) // ✅ برای تست
+  router.push(`/dashboard/sub-locations/${cloud.id}`)
 };
 
 // حذف کارت

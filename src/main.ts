@@ -10,7 +10,7 @@ import { createI18n } from 'vue-i18n'
 
 import en from './locales/en.json'
 import fa from './locales/fa.json'
-
+import { Icon } from '@iconify/vue'
 const messages = {
   en,
   fa,
@@ -27,3 +27,4 @@ const app = createApp(App)
 app.use(i18n)
 app.use(router)
 app.mount('#app')
+app.component('Icon', Icon)

@@ -192,10 +192,34 @@
   resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.8.tgz"
   integrity sha512-cn3Yr7+OaaZq1c+2pe+8yxC8E144SReCQjN6/2ynubzYjvyqZjTXfQJpAcQpsdJq3My7XADANiYGHoFC69pLQw==
 
+"@fortawesome/fontawesome-common-types@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-7.0.0.tgz"
+  integrity sha512-PGMrIYXLGA5K8RWy8zwBkd4vFi4z7ubxtet6Yn13Plf6krRTwPbdlCwlcfmoX0R7B4Z643QvrtHmdQ5fNtfFCg==
+
 "@fortawesome/fontawesome-free@^7.0.0":
   version "7.0.0"
   resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-7.0.0.tgz"
   integrity sha512-X48nISrSOa89zu2VMljC4XaRf8NmgTwQBVHfS2Nu5G00ZwM31oOVrAtGxZF3b6wDYf9lJsf/Eq4cCSFKIkOWPQ==
+
+"@fortawesome/fontawesome-svg-core@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-7.0.0.tgz"
+  integrity sha512-obBEF+zd98r/KtKVW6A+8UGWeaOoyMpl6Q9P3FzHsOnsg742aXsl8v+H/zp09qSSu/a/Hxe9LNKzbBaQq1CEbA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "7.0.0"
+
+"@fortawesome/free-solid-svg-icons@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-7.0.0.tgz"
+  integrity sha512-njSLAllkOddYDCXgTFboXn54Oe5FcvpkWq+FoetOHR64PbN0608kM02Lze0xtISGpXgP+i26VyXRQA0Irh3Obw==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "7.0.0"
+
+"@fortawesome/vue-fontawesome@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.1.1.tgz"
+  integrity sha512-U5azn4mcUVpjHe4JO0Wbe7Ih8e3VbN83EH7OTBtA5/QGw9qcPGffqcmwsLyZYgEkpVkYbq/6dX1Iyl5KUGMp6Q==
 
 "@headlessui/vue@^1.7.23":
   version "1.7.23"
@@ -208,6 +232,18 @@
   version "2.2.0"
   resolved "https://registry.npmjs.org/@heroicons/vue/-/vue-2.2.0.tgz"
   integrity sha512-G3dbSxoeEKqbi/DFalhRxJU4mTXJn7GwZ7ae8NuEQzd1bqdd0jAbdaBZlHPcvPD2xI1iGzNVB4k20Un2AguYPw==
+
+"@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
+"@iconify/vue@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/vue/-/vue-5.0.0.tgz#c47e4b3a225a64bbf28dce924934f23e54b061a4"
+  integrity sha512-C+KuEWIF5nSBrobFJhT//JS87OZ++QDORB6f2q2Wm6fl2mueSTpFBeBsveK0KW9hWiZ4mNiPjsh6Zs4jjdROSg==
+  dependencies:
+    "@iconify/types" "^2.0.0"
 
 "@intlify/core-base@12.0.0-alpha.3":
   version "12.0.0-alpha.3"
@@ -569,7 +605,7 @@
 
 "@types/node@^24.2.1":
   version "24.2.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.2.1.tgz#83e41543f0a518e006594bb394e2cd961de56727"
+  resolved "https://registry.npmjs.org/@types/node/-/node-24.2.1.tgz"
   integrity sha512-DRh5K+ka5eJic8CjH7td8QpYEV6Zo10gfRkjHCO3weqZHWDtAaSTFtl4+VMqOJ4N5jcuhZ9/l+yy8rVgw7BQeQ==
   dependencies:
     undici-types "~7.10.0"
@@ -1657,7 +1693,7 @@ typescript@~5.8.3:
 
 undici-types@~7.10.0:
   version "7.10.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.10.0.tgz#4ac2e058ce56b462b056e629cc6a02393d3ff350"
+  resolved "https://registry.npmjs.org/undici-types/-/undici-types-7.10.0.tgz"
   integrity sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==
 
 update-browserslist-db@^1.1.3:
@@ -1704,14 +1740,14 @@ vue-i18n@12.0.0-alpha.3:
 
 vue-router@^4.5.1:
   version "4.5.1"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.5.1.tgz#47bffe2d3a5479d2886a9a244547a853aa0abf69"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.5.1.tgz"
   integrity sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==
   dependencies:
     "@vue/devtools-api" "^6.6.4"
 
 vue-tsc@^3.0.5:
   version "3.0.5"
-  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-3.0.5.tgz#2edb2222393fd8b70613c083aacc72484a9296be"
+  resolved "https://registry.npmjs.org/vue-tsc/-/vue-tsc-3.0.5.tgz"
   integrity sha512-PsTFN9lo1HJCrZw9NoqjYcAbYDXY0cOKyuW2E7naX5jcaVyWpqEsZOHN9Dws5890E8e5SDAD4L4Zam3dxG3/Cw==
   dependencies:
     "@volar/typescript" "2.4.22"
